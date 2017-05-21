@@ -1,0 +1,5 @@
+asset 'angular'
+asset 'bootstrap-sass-official'
+asset 'angular-bootstrap'
+asset 'moment'
+asset 'angular-ui-router'
