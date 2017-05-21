@@ -5,6 +5,8 @@
     "bootstrap-sass-official": "latest",
     "angular-bootstrap": "latest",
     "moment": "latest",
-    "angular-ui-router": "latest"
+    "angular-ui-router": "latest",
+    "angular-cookies": "latest",
+    "restangular": "latest"
   }
 }

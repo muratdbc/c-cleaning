@@ -1,6 +1,6 @@
 'use strict';
 angular.module('crystalClean', ['ui.bootstrap','ui.router',
- 'templates'])
+ 'templates','ngCookies'])
 .config([
  '$stateProvider',
  '$urlRouterProvider',

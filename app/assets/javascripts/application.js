@@ -18,6 +18,7 @@
 //= require angular-rails-templates
 //= require angular-bootstrap/ui-bootstrap
 //= require moment/moment
+//= require angular-cookies/angular-cookies
 //= require_tree ./module
 //= require_tree ./controller/job
 //= require_tree .
