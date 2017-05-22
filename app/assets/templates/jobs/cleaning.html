@@ -1,7 +1,7 @@
 <div >
   <div>
     <div ng-if="jobs.length===0" style="font-size: 16px;text-align: center;margin-top: 10px;">
-      You don't have a cleaning scheduled yet. Please <a href="/customer/cleanings/new">click here</a>  to schedule one.
+        To schedule a cleaning <a href="/customer/cleanings/new">click here</a>
     </div>
     <div class="list-group" ng-if="jobs.length>0">
       <div ng-repeat="job in jobs">
@@ -13,4 +13,10 @@
       </div>
     </div>
   </div>
+</div>
+<div class="footer">
+  <a href="/customer/cleanings/new">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    Add Cleaning
+  </a>
 </div>
