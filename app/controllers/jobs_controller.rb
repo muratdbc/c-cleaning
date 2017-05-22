@@ -14,7 +14,7 @@ class JobsController < ApplicationController
   def index
     if params[:user_id]
       jobs=Job.where('customer_id = ?' , params[:user_id].to_i)
-      render json: {jobs: jobs}, status: :ok
+      render json: [jobs: jobs], status: :ok
       else
       jobs=Job.all
       render json: {jobs: jobs}, status: :ok

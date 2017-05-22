@@ -1,6 +1,8 @@
-angular.module('crystalClean').controller('cleaningJobController', function ($scope,$cookies,CleaningService) {
+angular.module('crystalClean').controller('cleaningJobController', function ($scope,$cookies,jobService) {
   console.log("here")
   $scope.lastName="Gocmen"
   var userIdCookie = $cookies.get('user_id');
-  jobs=CleanigService.getjobs(userIdCookie)
+  jobService.getJobs(userIdCookie).then(function(response){
+    $scope.jobs=response[0].jobs
+  })
 });
