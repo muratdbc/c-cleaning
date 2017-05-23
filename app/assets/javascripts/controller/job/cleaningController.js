@@ -5,4 +5,12 @@ angular.module('crystalClean').controller('cleaningJobController', function ($sc
   jobService.getJobs(userIdCookie).then(function(response){
     $scope.jobs=response[0].jobs
   })
+  // this get the results from google auto complete
+  $scope.result1 = '';
+  $scope.options1 = null;
+  $scope.details1 = '';
+
+  $scope.addCleaning=function(){
+
+   }
 });

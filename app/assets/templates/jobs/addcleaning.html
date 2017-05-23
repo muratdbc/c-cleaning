@@ -1,3 +1,49 @@
-<div class="">
-  Add Cleaning
+<div class="container">
+
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      Add Cleaning
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <label for="Autocomplete2">Address</label>
+      <input type="text" ng-model="place"  class="form-control"  ng-autocomplete="result1" details="details1" options="options1" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <label for="unitNumber">Unit Number</label>
+      <input type="text" ng-model="place"  class="form-control"   />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <label for="date">Job Date</label>
+     <input type="date" />
+    </div>
+    <div class="col-xs-6">
+      <label for="time">Job Date</label>
+     <input type="date"  />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <label for="access">Access Code Instructions</label>
+      <textarea name="access-code" rows="4" cols="42"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <label for="">Same Day Clean?</label>
+      <label>
+       <input type="checkbox" >
+     </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+    <button type="button" ng-click="addCleaning()" class="btn btn-default">Add Cleaning</button>
+  </div>
+  </div>
 </div>

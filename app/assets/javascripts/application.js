@@ -23,6 +23,7 @@
 //= require angular-cookies/angular-cookies
 //= require_tree ./module
 //= require_tree ./services/job
+//= require_tree ./services/ngAutocomplete
 //= require_tree ./controller/job
 //= require_tree .
 //= require_tree ../templates

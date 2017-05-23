@@ -2,8 +2,9 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Rails Devise" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Devise" %>">
+    <title><%= content_for?(:title) ? yield(:title) : "C-Cleaning" %></title>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCh3f2Up62SNA0fhcHReuK9gv2697osbDY"></script>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "C-Cleaning" %>">
     <%= stylesheet_link_tag 'application' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
@@ -11,4 +12,5 @@
   <body>
     <%= yield %>
   </body>
+
 </html>
