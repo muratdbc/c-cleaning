@@ -18,7 +18,7 @@
 //= require restangular/dist/restangular
 //= require angular-ui-router/release/angular-ui-router
 //= require angular-rails-templates
-//= require angular-bootstrap/ui-bootstrap
+//= require angular-bootstrap/ui-bootstrap-tpls
 //= require moment/moment
 //= require angular-cookies/angular-cookies
 //= require_tree ./module

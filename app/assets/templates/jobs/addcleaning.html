@@ -8,24 +8,31 @@
   <div class="row">
     <div class="col-xs-12">
       <label for="Autocomplete2">Address</label>
-      <input type="text" ng-model="place"  class="form-control"  ng-autocomplete="result1" details="details1" options="options1" />
+      <input type="text"   class="form-control"  ng-autocomplete="result1" details="details1" options="options1" />
     </div>
   </div>
   <div class="row">
     <div class="col-xs-6">
       <label for="unitNumber">Unit Number</label>
-      <input type="text" ng-model="place"  class="form-control"   />
+      <input type="text" ng-model="unitNumber"  class="form-control"   />
     </div>
   </div>
   <div class="row">
     <div class="col-xs-6">
       <label for="date">Job Date</label>
-     <input type="date" />
+      <p class="input-group">
+        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default" ng-click="openJobDatePopup()"><i class="glyphicon glyphicon-calendar"></i></button>
+        </span>
+        </p>
     </div>
+  </div>
+  <div class="row">
     <div class="col-xs-6">
-      <label for="time">Job Date</label>
-     <input type="date"  />
-    </div>
+      <label for="time">Job Time</label>
+      <div uib-timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="true"></div>
+  </div>
   </div>
   <div class="row">
     <div class="col-xs-12">
