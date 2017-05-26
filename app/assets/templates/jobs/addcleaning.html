@@ -1,5 +1,4 @@
 <div class="container">
-
   <div class="row">
     <div class="col-xs-12 text-center">
       Add Cleaning
@@ -21,7 +20,7 @@
     <div class="col-xs-6">
       <label for="date">Job Date</label>
       <p class="input-group">
-        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="job_date" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
         <span class="input-group-btn">
           <button type="button" class="btn btn-default" ng-click="openJobDatePopup()"><i class="glyphicon glyphicon-calendar"></i></button>
         </span>
@@ -31,20 +30,20 @@
   <div class="row">
     <div class="col-xs-6">
       <label for="time">Job Time</label>
-      <div uib-timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="true"></div>
+      <div uib-timepicker  ng-change="changed()" ng-model="job_time" hour-step="hstep" minute-step="mstep" show-meridian="true"></div>
   </div>
   </div>
   <div class="row">
     <div class="col-xs-12">
       <label for="access">Access Code Instructions</label>
-      <textarea name="access-code" rows="4" cols="42"></textarea>
+      <textarea name="access-code" ng-model="notes" rows="4" cols="42"></textarea>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-6">
       <label for="">Same Day Clean?</label>
       <label>
-       <input type="checkbox" >
+       <input type="checkbox" ng-model="back_to_back" >
      </label>
     </div>
   </div>

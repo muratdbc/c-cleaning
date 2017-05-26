@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get '/jobs-sync', to: 'jobsync#sync'
   get 'customer/cleanings', to: 'visitors#customer'
   get 'customer/cleanings/new', to: 'visitors#customer'
+  get 'customer/cleanings/:id', to: 'visitors#customer'
 end

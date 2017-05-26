@@ -5,7 +5,7 @@
     </div>
     <div class="list-group" ng-if="jobs.length>0">
       <div ng-repeat="job in jobs">
-        <a href="#" class="list-group-item" style="box-shadow: 7px 8px 10px #888888;">
+        <a ui-sref="cleaningDetail({ cleaningId: job.id })" class="list-group-item" style="box-shadow: 7px 8px 10px #888888;">
         <h4 class="list-group-item-heading">{{job.address_1}}</h4>
         <p class="list-group-item-text">{{job.job_date | date: 'fullDate'}}</p>
         </a>
