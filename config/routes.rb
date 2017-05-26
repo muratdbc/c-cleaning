@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   get 'customer/cleanings', to: 'visitors#customer'
   get 'customer/cleanings/new', to: 'visitors#customer'
   get 'customer/cleanings/:id', to: 'visitors#customer'
+  get 'provider/cleanings', to: 'visitors#customer'
+  get 'provider/cleanings/:id', to: 'visitors#customer'
 end

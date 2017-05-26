@@ -2,7 +2,14 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
   def after_sign_in_path_for(resource)
-     customer_cleanings_path(resource)
+    p resource.role
+    if(resource.role=="customer")
+     customer_cleanings_path
+   elsif(resource.role=="provider")
+     provider_cleanings_path
+    else
+      root_path
+    end
   end
   protected
 
