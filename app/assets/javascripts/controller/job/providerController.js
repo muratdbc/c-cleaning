@@ -1,4 +1,4 @@
-angular.module('crystalClean').controller('cleaningJobDetailsController',function($scope,$stateParams,$cookies,jobService){
+angular.module('crystalClean').controller('providerJobDetailsController',function($scope,$stateParams,$cookies,jobService){
   var userIdCookie = $cookies.get('user_id');
   jobService.getJob(userIdCookie,$stateParams.cleaningId).then(function(response){
     $scope.job=response.job
