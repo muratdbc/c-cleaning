@@ -1,6 +1,11 @@
 'use strict';
-angular.module('crystalClean', ['ui.bootstrap','ui.router',
- 'templates','ngCookies','restangular','ngAutocomplete','ui.bootstrap'])
+angular.module('crystalClean', ['ui.bootstrap',
+ 'ui.router',
+ 'templates',
+ 'ngCookies',
+ 'restangular',
+ 'angularFileUpload',
+ 'ngAutocomplete','ui.bootstrap'])
 .config([
  '$stateProvider',
  '$urlRouterProvider',

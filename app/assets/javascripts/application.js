@@ -16,6 +16,7 @@
 //= require angular/angular
 //= require lodash/dist/lodash
 //= require restangular/dist/restangular
+//= require angular-file-upload/dist/angular-file-upload
 //= require angular-ui-router/release/angular-ui-router
 //= require angular-rails-templates
 //= require angular-bootstrap/ui-bootstrap-tpls
@@ -24,6 +25,7 @@
 //= require_tree ./module
 //= require_tree ./services/job
 //= require_tree ./services/ngAutocomplete
+//= require_tree ./services/ngThumb
 //= require_tree ./controller/job
 //= require_tree .
 //= require_tree ../templates

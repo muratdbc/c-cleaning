@@ -1,8 +1,22 @@
-angular.module('crystalClean').controller('providerJobDetailsController',function($scope,$stateParams,$cookies,jobService){
+angular.module('crystalClean').controller('providerJobDetailsController',
+function($scope,$stateParams,$cookies,jobService,FileUploader){
   var userIdCookie = $cookies.get('user_id');
   jobService.getJob(userIdCookie,$stateParams.cleaningId).then(function(response){
     $scope.job=response.job
   })
+  var uploader = $scope.uploader = new FileUploader({
+           url: 'upload.php'
+  });
+
+  // FILTERS
+
+  uploader.filters.push({
+    name: 'imageFilter',
+    fn: function(item /*{File|FileLikeObject}*/, options) {
+       var type = '|' + item.type.slice(item.type.lastIndexOf('/') + 1) + '|';
+            return '|jpg|png|jpeg|bmp|gif|'.indexOf(type) !== -1;
+        }
+    });
 });
 angular.module('crystalClean').controller('providerJobController', function ($scope,$cookies,jobService) {
   console.log("here")
