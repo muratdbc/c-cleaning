@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170526020123) do
+ActiveRecord::Schema.define(version: 20170603235128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,18 @@ ActiveRecord::Schema.define(version: 20170526020123) do
 
   add_index "jobs", ["customer_id"], name: "index_jobs_on_customer_id", using: :btree
   add_index "jobs", ["provider_id"], name: "index_jobs_on_provider_id", using: :btree
+
+  create_table "photos", force: :cascade do |t|
+    t.text     "url"
+    t.boolean  "is_deleted", default: false
+    t.boolean  "is_active",  default: true
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.integer  "job_id"
+    t.string   "image"
+  end
+
+  add_index "photos", ["job_id"], name: "index_photos_on_job_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

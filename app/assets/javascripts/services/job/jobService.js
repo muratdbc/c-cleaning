@@ -15,7 +15,6 @@ angular.module('crystalClean').factory('jobService', ['Restangular', function(Re
     function getJob(userId,cleaningId){
       return Restangular.one('users/'+userId+'/jobs/'+cleaningId).get();
     }
-
     return service;
 
 }]);

@@ -8,6 +8,8 @@
     "angular-ui-router": "latest",
     "angular-cookies": "latest",
     "restangular": "latest",
-    "angular-file-upload": "latest"
+    "ng-file-upload": "latest",
+    "aws-sdk-js": "latest",
+    "toastr": "latest"
   }
 }

@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   root to: 'visitors#index'
   resources :users
   resources :rental
-
+  resource :photos
+  get 'jobs' ,to: 'jobs#index'
   resources :users do
     resources :jobs
   end
@@ -14,4 +15,7 @@ Rails.application.routes.draw do
   get 'customer/cleanings/:id', to: 'visitors#customer'
   get 'provider/cleanings', to: 'visitors#customer'
   get 'provider/cleanings/:id', to: 'visitors#customer'
+  post 'provider/cleanings/:id/photos', to: 'photos#create'
+  delete 'provider/cleanings/:id/photos/:id', to: 'photos#destroy'
+  post  'presigned', to: 'jobs#presigned'
 end

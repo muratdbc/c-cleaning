@@ -16,8 +16,10 @@
 //= require angular/angular
 //= require lodash/dist/lodash
 //= require restangular/dist/restangular
-//= require angular-file-upload/dist/angular-file-upload
+//= require ng-file-upload/ng-file-upload-all
 //= require angular-ui-router/release/angular-ui-router
+//= require aws-sdk-js/dist/aws-sdk
+//= require toastr/toastr
 //= require angular-rails-templates
 //= require angular-bootstrap/ui-bootstrap-tpls
 //= require moment/moment
