@@ -1,5 +1,7 @@
 class User::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
+  clear_respond_to
+  respond_to :json
   skip_before_action :verify_authenticity_token
 
   # GET /resource/sign_in
@@ -13,10 +15,10 @@ class User::SessionsController < Devise::SessionsController
   # end
 
   # DELETE /resource/sign_out
-  def destroy
-    super
-    cookies.delete :user_id
-  end
+  # def destroy
+  #   super
+  #   cookies.delete :user_id
+  # end
 
   # protected
 

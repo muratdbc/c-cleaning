@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users ,:controllers => { :sessions => "user/sessions" }
+  devise_for :users ,:controllers => { :sessions => "user/sessions", registrations: 'user/registrations' }
   root to: 'visitors#index'
   resources :users
   resources :rental
   resource :photos
   get 'jobs' ,to: 'jobs#index'
-  resources :users do
-    resources :jobs
-  end
+  # resources :users do
+  #   resources :jobs
+  # end
 
   get '/jobs-sync', to: 'jobsync#sync'
   get 'customer/cleanings', to: 'visitors#customer'
